@@ -1,0 +1,22 @@
+// Return vendor-prefixed property names if appropriate
+// Example: transition-property-names((transform, color, background), moz) -> -moz-transform, color, background
+//************************************************************************//
+@function transition-property-names($props, $vendor: false) {
+  $-props: ();
+
+  @each $prop in $props {
+    $-props: append($-props, transition-property-name($prop, $vendor), comma);
+  }
+
+  @return $-props;
+}
+
+@function transition-property-name($prop, $vendor: false) {
+  // put other properties that need to be prefixed here aswell
+  @if $vendor and $prop == transform {
+    @return unquote('-'+$vendor+'-'+$prop);
+  }
+  @else {
+    @return $prop;
+  }
+}

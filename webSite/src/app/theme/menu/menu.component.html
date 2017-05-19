@@ -1,0 +1,49 @@
+<nav>
+<!--Logo-->
+<div class="logo">
+    <a href="javascript:;"><img src="/assets/img/public/logo.png" /></a>
+</div>
+<!--Logo-->
+<!--Desktop Nav-->
+<div class="navList">
+    <ul>
+        <li>
+            <a href="javascript:;">Yüzükler<i class="fa fa-angle-down"></i></a>
+            <ul class="hover">
+                <li><a href="javascript:;">İnce Bilezikler</a></li>
+                <li><a href="javascript:;">Kalın</a></li>
+                <li><a href="javascript:;">Değişik</a></li>
+            </ul>
+        </li>
+        <li><a href="javascript:;">Bilezikler</a></li>
+        <li>
+            <a href="javascript:;">Küpeler<i class="fa fa-angle-down"></i></a>
+            <ul class="hover">
+                <li><a href="javascript:;">Taşlı</a></li>
+                <li><a href="javascript:;">Taşsız</a></li>
+                <li><a href="javascript:;">Desenli</a></li>
+            </ul>
+        </li>
+        <li><a href="javascript:;">Kolyeler</a></li>
+        <li><a href="javascript:;">Bileklikler</a></li>
+        <li><a href="javascript:;">Setler</a></li>
+    </ul>
+</div>
+<!--Desktop Nav-->
+<!--Mobil Menu-->
+<div class="mobilNavList" [ngClass]="active ? 'active':''">
+    <ul id="allCatagory" [ngClass]="{'listActive':true}">
+        <li><a href="javascript:;"><img src="http://www.swarovski.com/is-bin/intershop.static/WFS/SCO-Media-Site/-/-/publicimages/CG/B2C/PROD/600/Swarovski-Frisson-Ring-5251691-W600.jpg" /><span>Yüzük</span></a></li>
+        <li><a href="javascript:;"><img src="http://www.swarovski.com/is-bin/intershop.static/WFS/SCO-Media-Site/-/-/publicimages/CG/B2C/PROD/600/Swarovski-Angelic-Bracelet-5240513-W600.jpg" /><span>Bilezikler</span></a></li>
+        <li><a href="javascript:;"><img src="http://www.swarovski.com/is-bin/intershop.static/WFS/SCO-Media-Site/-/-/publicimages/CG/B2C/PROD/600/Swarovski-Cosmic-Necklace-5217160-W600.jpg" /><span>Kolyeler</span></a></li>
+        <li><a href="javascript:;"><img src="http://i.ebayimg.com/00/s/MTIxNFgxNjAw/z/ryoAAOSw0e9UuvDN/$_57.JPG?set_id=880000500F" /><span>Bileklikler</span></a></li>
+        <li><a href="javascript:;"><img src="https://3.imimg.com/data3/EG/IF/MY-8684350/designer-necklace-set-250x250.jpg" /><span>Setler</span></a></li>
+    </ul>
+</div>
+<span class="navButonMobil" (click)="menu()" [ngClass]="active ? 'active':''">
+    <i></i>
+    <i></i>
+    <i></i>
+</span>
+<!--Mobil Menu-->
+</nav>

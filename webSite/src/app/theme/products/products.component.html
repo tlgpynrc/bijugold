@@ -1,0 +1,29 @@
+<section class="container">
+    <div class="sec1 center">
+        <h1>En Çok Satanlar</h1>
+        <ul>
+            <!--<li class="col-sm-4 col-md-4 col-xs-6">
+                <a href="" class="noPadding-bottom">
+                    <img src="http://w3.cdn.gpd.s3.amazonaws.com/gb.pedigree.3/thumb_pedigree-complete-dry-with-beef-and-vegetables-12kg-636268889942397730.png" />
+                    <img src="http://w3.cdn.gpd.s3.amazonaws.com/gb.pedigree.3/large_pedigree-complete-dry-with-beef-and-vegetables-12kg-636268889942397730.png" class="hover"/>
+                    <div class="product-comment">
+                        <h2 class="pad-bottom-0">Altın Ay Yıldız Yüzük </h2>
+                        <h3>60 TL'den başlayan taksitlerle</h3>
+                        <p>235<i class="fa fa-turkish-lira"></i></p>
+                    </div>
+                </a>
+            </li>-->
+              <li class="col-sm-4 col-md-4 col-xs-6" *ngFor="let product of products">
+                <a href="" class="noPadding-bottom">
+                    <img src="http://w3.cdn.gpd.s3.amazonaws.com/gb.pedigree.3/thumb_pedigree-complete-dry-with-beef-and-vegetables-12kg-636268889942397730.png" />
+                    <img src="" class="hover"/>
+                    <div class="product-comment">
+                        <h2 class="pad-bottom-0">{{product.name}}</h2>
+                        <h3>60 TL'den başlayan taksitlerle</h3>
+                        <p>235<i class="fa fa-turkish-lira"></i></p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>

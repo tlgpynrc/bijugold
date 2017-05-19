@@ -1,0 +1,109 @@
+@import '../scss/_style';
+.sec1 {
+    ul {
+        width: 100%;
+        float: left;
+        padding-bottom: 2vw;
+        
+        li {
+            margin-bottom: 15px;
+            a {
+                width: 100%;
+                float: left;
+                position: relative;
+                padding: 5%;
+                border:1px solid $gray;
+                overflow: hidden;
+                position: relative;
+                img {
+                    width: 100%;
+                    opacity: 1;
+                    @include transition(ease all .5s);
+                    margin-bottom:5px;
+                    &.hover {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        @include transition(ease all .5s);
+                        opacity: 0;
+                    }
+                }
+
+                &:hover {
+                    img {
+                        @include transition(ease all .5s);
+                        opacity: 0;
+
+                        &.hover {
+                            @include transition(ease all .5s);
+                            opacity: 1;
+                        }
+                    }
+                    .product-comment{
+                        bottom: 0px;
+                        @include transition(ease all .5s);
+                    }
+                }
+                .product-comment{
+                    position: absolute;
+                    width: 100%;
+                    @include transition(ease all .5s);
+                    bottom: -115px;
+                    background: $wopacity;
+                    max-height: 115px;
+                    left:0;
+                     h2,h3{
+                        width:100%;
+                        float:left;
+                        text-align:center;
+                        font-size:14px;
+                        padding:10px 0;
+                        font-family:$font1;
+                    }
+                    p{
+                        width:100%;
+                        float:left;
+                        padding:10px 0;
+                        font-family:$font2;
+                        text-align:center;
+                        font-size:18px;
+                        @include border-top(1px solid #e5e5e5);
+                        i{
+                            margin-left:2px;
+                            font-size:12px;
+                        }
+                    }
+                }
+               
+            }
+        }
+    }
+}
+@include breakpoint(xs) {
+    .sec1{
+        ul{
+            li{
+                a{
+                    h2,h3{
+                        font-size:13px;
+                    }
+                    p{
+                        font-size:16px;
+                    }
+                }
+            }
+        }
+    }
+}
+@include breakpoint(xss){
+    .sec1{
+        ul{
+            li{
+                width:100%;
+                max-width:320px;
+                float:none;
+                margin:auto;
+            }
+        }
+    }
+}
