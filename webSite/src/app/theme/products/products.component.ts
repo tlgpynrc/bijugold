@@ -10,8 +10,9 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 export class ProductsComponent implements OnInit {
 
   products = ["ahmet","mehmet","mustafa","sadi"]
-  
+
   constructor() { }
+
 
   ngOnInit() {
   }
